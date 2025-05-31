@@ -22,6 +22,7 @@ model User {
   image         String?
   username      String?         @unique
   bio           String?
+  connectedStripeAccountID String?
 
   accounts      Account[]
   sessions      Session[]

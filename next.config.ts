@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
         hostname: 'avatars.githubusercontent.com',
       },
     ],
+    domains: [
+      "lh3.googleusercontent.com", // adiciona este
+      "cdn-icons-png.freepik.com" // se quiser permitir também o fallback
+    ],
   }
 };
 
