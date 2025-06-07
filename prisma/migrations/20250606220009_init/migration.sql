@@ -10,6 +10,7 @@ CREATE TABLE "User" (
     "image" TEXT,
     "username" TEXT,
     "bio" TEXT,
+    "connectedStripeAccountID" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
@@ -20,7 +21,7 @@ CREATE TABLE "User" (
 CREATE TABLE "Donation" (
     "id" TEXT NOT NULL,
     "amount" INTEGER NOT NULL,
-    "donoName" TEXT NOT NULL,
+    "donorName" TEXT NOT NULL,
     "donorMessage" TEXT NOT NULL,
     "userId" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,

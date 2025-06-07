@@ -38,7 +38,7 @@ model User {
 model Donation {
   id            String @id @default(cuid())
   amount        Int
-  donoName      String
+  donorName      String
   donorMessage  String
 
   userId        String

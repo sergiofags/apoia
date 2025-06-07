@@ -50,7 +50,7 @@ export async function createPayment(data: CreatePaymentSchema) {
 
     const donation = await prisma.donation.create({
       data: {
-        donoName: data.name,
+        donorName: data.name,
         donorMessage: data.message,
         userId: creator.id,
         status: "PENDING",

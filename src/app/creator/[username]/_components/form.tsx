@@ -51,21 +51,37 @@ export function FormDonate({ slug, creatorId }: FormDonateProps) {
             price: priceInCents,
         })
 
+        if (!checkout) {
+            toast.error("Erro inesperado ao processar o pagamento.");
+            return;
+        }
+
+        await handlePaymentsResponse(checkout)
+
+    }
+
+    async function handlePaymentsResponse(checkout: { sessionId?: string, error?: string }) {
+        
         if(checkout.error){
             toast.error(checkout.error)
             return;
         }
 
-        if(checkout.sessionId){
-            // Use the sessionId as needed, for example, redirect to checkout
-            console.log("Session ID:", checkout.sessionId)
-
-            const stripe = await getStripeJs();
-
-            await stripe?.redirectToCheckout({ 
-                sessionId: checkout.sessionId 
-            });
+        if(!checkout.sessionId){
+            toast.error("Falha ao criar o pagamento, tente mais tarde.")
+            return;
         }
+
+        const stripe = await getStripeJs();
+
+        if(!stripe){
+            toast.error("Falha ao criar o pagamento, tente mais tarde.")
+            return;
+        }
+
+        await stripe?.redirectToCheckout({ 
+            sessionId: checkout.sessionId
+        });
 
     }
 
