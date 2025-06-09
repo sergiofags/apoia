@@ -43,5 +43,5 @@ Este sistema permite que criadores de conteúdo criem perfis personalizados para
 - **[Stripe](https://stripe.com/)** – Processamento de pagamentos
 
 ## 📸 Screenshots
-<img src="https://media.licdn.com/dms/image/v2/D4D2DAQF7BWvY-hVMGA/profile-treasury-image-shrink_800_800/B4DZdIEsP.HkAc-/0/1749260879540?e=1750078800&v=beta&t=wbg8L7E8RT_nPcEle9BRaxqxog_tSz6gmYEre3lth1k" width="500px" />
+<img src="https://media.licdn.com/dms/image/v2/D4D2DAQF7BWvY-hVMGA/profile-treasury-image-shrink_800_800/B4DZdIEsP.HkAc-/0/1749260879540?e=1750078800&v=beta&t=wbg8L7E8RT_nPcEle9BRaxqxog_tSz6gmYEre3lth1k" width="100%" />
 
