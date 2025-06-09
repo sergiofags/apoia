@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💸 Apoia
 
-## Getting Started
+Uma plataforma construída com **Next.js**, **React.js**, **TypeScript**, **AuthJS**, **Prisma ORM**, **PostgreSQL**, **React Query** e **Stripe** para facilitar doações para criadores de conteúdo.
 
-First, run the development server:
+## 📌 Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este sistema permite que criadores de conteúdo criem perfis personalizados para receber doações de apoiadores. Doadores podem contribuir com valores fixos e deixar mensagens de apoio. A plataforma oferece autenticação social, integração com Stripe e um painel para visualizar o apoio recebido.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 👥 Autenticação
+- Cadastro e login via sistema interno
+- Login via **Google** ou **GitHub** com **AuthJS**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧑‍💼 Dashboard do Usuário
+- Visualização do número total de apoiadores
+- Total de valor recebido em doações
+- Lista de mensagens recebidas
 
-## Learn More
+### 📝 Perfil Público
+- Nome do criador
+- Biografia personalizada
+- Link único para doações (ex: `/creator/nome_do_criador`)
 
-To learn more about Next.js, take a look at the following resources:
+### 💰 Doações
+- Doações nos valores de: R$5, R$10, R$20, R$50, R$100 e R$200
+- Doadores podem deixar:
+  - Nome
+  - Mensagem personalizada
+  - Valor escolhido
+- Redirecionamento para o **Stripe Checkout**
+- Mensagem e valor aparecem automaticamente na dashboard do criador após confirmação de pagamento
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tecnologias Utilizadas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **[Next.js](https://nextjs.org/)** – Framework React fullstack
+- **[React.js](https://reactjs.org/)** – Interface do usuário
+- **[TypeScript](https://www.typescriptlang.org/)** – Tipagem estática
+- **[AuthJS](https://authjs.dev/)** – Autenticação com provedores OAuth
+- **[Prisma ORM](https://www.prisma.io/)** – ORM para banco de dados PostgreSQL
+- **[PostgreSQL](https://www.postgresql.org/)** – Banco de dados relacional
+- **[React Query](https://tanstack.com/query/latest)** – Gerenciamento de dados assíncronos
+- **[Stripe](https://stripe.com/)** – Processamento de pagamentos
 
-## Deploy on Vercel
+## 📸 Screenshots
+<img src="https://media.licdn.com/dms/image/v2/D4D2DAQF7BWvY-hVMGA/profile-treasury-image-shrink_800_800/B4DZdIEsP.HkAc-/0/1749260879540?e=1750078800&v=beta&t=wbg8L7E8RT_nPcEle9BRaxqxog_tSz6gmYEre3lth1k" width="500px" />
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
