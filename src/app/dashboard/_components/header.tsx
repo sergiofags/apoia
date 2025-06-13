@@ -1,16 +1,23 @@
+"use client"
 
 import Link from "next/link"
 import { LogOut, PiggyBank } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MobileMenu } from "./menu-mobile"
+import { logout } from "../_actions/logout"
 
 export function Header() {
+
+  async function handleLogout() {
+    await logout()
+  }
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
 
       <div className="flex h-16 items-center justify-between w-full px-4 max-w-7xl mx-auto">
         <div className="flex items-center gap-2 font-semibold">
-          <Link href="/dashboard" className="flex items-center gap-1 text-cyan-600">
+          <Link href="/dashboard" className="flex items-center gap-1 text-green-600">
             <PiggyBank className="h-6 w-6 mr-2" />
             <span className="text-xl font-bold">
               Apoia.ai
@@ -29,7 +36,8 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-red-500 hover:text-red-600 hover:bg-red-50"
+            className="text-red-500 hover:text-red-600 hover:bg-red-50 cursor-pointer"
+            onClick={handleLogout}
           >
             <LogOut className="h-5 w-5" />
             <span className="sr-only">Sair</span>

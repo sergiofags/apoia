@@ -23,6 +23,7 @@ model User {
   username      String?         @unique
   bio           String?
   connectedStripeAccountID String?
+  password      String?
 
   accounts      Account[]
   sessions      Session[]
