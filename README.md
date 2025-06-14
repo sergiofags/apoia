@@ -9,7 +9,6 @@ Este sistema permite que criadores de conteúdo criem perfis personalizados para
 ## 🚀 Funcionalidades
 
 ### 👥 Autenticação
-- Cadastro e login via sistema interno
 - Login via **Google** ou **GitHub** com **AuthJS**
 
 ### 🧑‍💼 Dashboard do Usuário
