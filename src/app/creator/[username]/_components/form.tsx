@@ -16,7 +16,7 @@ import { getStripeJs } from '@/lib/stripe-js'
 const formSchema = z.object({
     name: z.string().min(1, "O nome é obrigatório"),
     message: z.string().min(1, "A mensagem é obrigatória"),
-    price: z.enum(["15", "25", "35"], {
+    price: z.enum(["5", "10", "20", "50", "100", "200"], {
         required_error: "O valor é obrigatório",
     })
 })
@@ -35,7 +35,7 @@ export function FormDonate({ slug, creatorId }: FormDonateProps) {
         defaultValues: {
             name: "",
             message: "",
-            price: "15",
+            price: "5",
         },
     })
 
@@ -129,7 +129,7 @@ export function FormDonate({ slug, creatorId }: FormDonateProps) {
                                 defaultValue={field.value}
                                 className="flex items-center gap-2"
                             >
-                                {["15", "25", "35"].map((value) => (
+                                {["5", "10", "20", "50", "100", "200"].map((value) => (
                                     <div key={value} className="flex items-center gap-2">
                                         <RadioGroupItem value={value} id={`value-${value}`} />
                                         <Label htmlFor={value}>R${value}</Label>

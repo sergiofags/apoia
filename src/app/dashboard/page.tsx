@@ -4,6 +4,7 @@ import { auth } from '@/lib/auth'
 import {redirect } from 'next/navigation'
 import CreateAccountButton from "./_components/create-account-button";
 import { getStripeDashboard } from "./_data-access/get-stripe-dashboard";
+import { Button } from "@/components/ui/button";
 
 export default async function Dashboard() {
   const session = await auth();
@@ -21,7 +22,7 @@ export default async function Dashboard() {
           <h1 className="text-2xl font-semibold">Minha conta</h1>
 
           { loginLink && (
-            <a href={loginLink} className="bg-zinc-900 px-4 py-1 rounded-md text-white cursor-pointer">
+            <a href={loginLink} className="bg-gradient-to-r from-zinc-900 to-gray-800 px-6 py-2 font-semibold rounded-md text-white cursor-pointer">
               Ajustar conta
             </a>
           )}
@@ -34,7 +35,7 @@ export default async function Dashboard() {
 
       <Stats userId={session.user.id} stripeAccountId={session.user.connectedStripeAccountID ?? ""} />
 
-      <h2 className="text-2xl font-semibold mb-2">Últimas doações</h2>
+      <h2 className="text-2xl font-semibold mb-4">Últimas doações</h2>
 
       { session.user.connectedStripeAccountID && (
         <DonationTable />

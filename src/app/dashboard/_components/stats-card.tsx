@@ -16,7 +16,7 @@ export function StatCard({
   iconClassName = "",
 }: StatCardProps) {
   return (
-    <Card className="bg-gradient-to-br from-zinc-900 to-zinc-800 text-white shadow-lg border-0">
+    <Card className="bg-gradient-to-br from-zinc-900 to-gray-900 text-white shadow-lg border-0">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <div>
           <CardTitle className="text-lg font-semibold">{title}</CardTitle>

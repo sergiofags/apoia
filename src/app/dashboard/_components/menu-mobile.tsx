@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, LogOut } from "lucide-react"
+import { Menu, LogOut, LayoutDashboard, UserRound } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { DialogTitle } from "@/components/ui/dialog"
@@ -31,25 +31,27 @@ export function MobileMenu() {
         <div className="flex flex-col gap-6 py-6">
           <Link
             href="/dashboard"
-            className="text-sm font-medium transition-colors hover:text-primary"
+            className="flex gap-2 text-sm font-medium transition-colors hover:text-primary"
             onClick={() => setOpen(false)}
           >
+            <LayoutDashboard className="h-5 w-5"/>
             Dashboard
           </Link>
           <Link
             href="/dashboard/me"
-            className="text-sm font-medium transition-colors hover:text-primary"
+            className="flex gap-2 text-sm font-medium transition-colors hover:text-primary"
             onClick={() => setOpen(false)}
           >
+            <UserRound className="h-5 w-5"/>
             Meu perfil
           </Link>
 
           <Button
             variant="ghost"
-            className="justify-start px-0 text-red-500 hover:text-red-600 hover:bg-transparent cursor-pointer"
+            className="justify-start px-0 text-red-500 hover:text-red-600 hover:bg-transparent cursor-pointer gap-2"
             onClick={handleLogout}
           >
-            <LogOut className="mr-2 h-4 w-4" />
+            <LogOut className="h-4 w-4" />
             Sair
           </Button>
         </div>

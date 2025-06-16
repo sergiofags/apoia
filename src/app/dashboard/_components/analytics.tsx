@@ -14,21 +14,21 @@ export async function Stats( { userId, stripeAccountId }: { userId: string, stri
       <StatCard
         title="Apoiadores"
         description="Total de apoiadores"
-        icon={<Users className="w-8 h-8 text-blue-400" />}
+        icon={<Users className="w-8 h-8 text-blue-500" />}
         value={totalQtdDonations ?? 0}
       />
 
       <StatCard
         title="Total recebido"
         description="Quantidade total recebida"
-        icon={<DollarSign className="w-8 h-8 text-amber-500" />}
+        icon={<DollarSign className="w-8 h-8 text-blue-500" />}
         value={formatCurrency((totalAmountResult ?? 0)/100)}
       />
 
       <StatCard
         title="Saldo em conta"
         description="Saldo pendente"
-        icon={<Wallet className="w-8 h-8 text-green-500" />}
+        icon={<Wallet className="w-8 h-8 text-blue-500" />}
         value={formatCurrency((balance ?? 0)/100)}
       />
 
